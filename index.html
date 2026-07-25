@@ -1,1 +1,637 @@
-file:///C:/Users/cs0063/Downloads/index%20(4).html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stoppage Time — DFW Youth Soccer, For Parents</title>
+<meta name="description" content="Stoppage Time is a podcast for parents navigating DFW youth club soccer — recruiting, ECNL vs MLS Next, costs, coaches, and everything after the final whistle.">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+
+<!-- Open Graph / Facebook, iMessage, LinkedIn, etc. -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://stoppagetimepod.com/">
+<meta property="og:title" content="Stoppage Time — DFW Youth Soccer, For Parents">
+<meta property="og:description" content="A podcast for parents navigating DFW youth club soccer — recruiting, ECNL vs MLS Next, costs, coaches, and everything after the final whistle.">
+<meta property="og:image" content="https://stoppagetimepod.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Twitter/X Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Stoppage Time — DFW Youth Soccer, For Parents">
+<meta name="twitter:description" content="A podcast for parents navigating DFW youth club soccer — recruiting, ECNL vs MLS Next, costs, coaches, and everything after the final whistle.">
+<meta name="twitter:image" content="https://stoppagetimepod.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --pitch-dark:#132419;
+    --pitch:#1F3D2E;
+    --chalk:#F4F1E8;
+    --chalk-dim:#E7E2D3;
+    --amber:#E8A33D;
+    --redclock:#C1443C;
+    --line:#6B9080;
+    --ink:#132419;
+    --ink-soft:#3C5245;
+    --max:1120px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--chalk);
+    color:var(--ink);
+    font-family:'Public Sans', sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important; transition:none !important;}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    background:
+      radial-gradient(ellipse 900px 500px at 50% -10%, rgba(232,163,61,0.14), transparent 60%),
+      linear-gradient(180deg, var(--pitch-dark) 0%, #0E1D14 100%);
+    overflow:hidden;
+    padding:0 24px;
+  }
+  .hero::before{
+    /* pitch line texture */
+    content:"";
+    position:absolute; inset:0;
+    background-image:
+      repeating-linear-gradient(90deg, rgba(244,241,232,0.035) 0px, rgba(244,241,232,0.035) 1px, transparent 1px, transparent 120px);
+    pointer-events:none;
+  }
+  .hero::after{
+    content:"";
+    position:absolute;
+    left:50%; top:0;
+    width:1px; height:100%;
+    background:rgba(244,241,232,0.06);
+    pointer-events:none;
+  }
+  .hero-inner{
+    position:relative;
+    max-width:var(--max);
+    margin:0 auto;
+    min-height:100svh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:96px 0 72px;
+  }
+  .eyebrow{
+    font-family:'Oswald', sans-serif;
+    font-weight:600;
+    letter-spacing:0.28em;
+    text-transform:uppercase;
+    font-size:12px;
+    color:var(--amber);
+    margin:0 0 28px;
+  }
+  .clock{
+    font-family:'Oswald', sans-serif;
+    font-weight:700;
+    font-variant-numeric:tabular-nums;
+    font-size:clamp(15px, 2.4vw, 18px);
+    letter-spacing:0.06em;
+    color:var(--line);
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:18px;
+  }
+  .clock .dot{
+    width:7px; height:7px; border-radius:50%;
+    background:var(--redclock);
+    animation:pulse 1.6s ease-in-out infinite;
+    flex:none;
+  }
+  @keyframes pulse{
+    0%,100%{opacity:1; transform:scale(1);}
+    50%{opacity:0.35; transform:scale(0.75);}
+  }
+  .clock .plus{ color:var(--redclock); }
+
+  .wordmark{
+    font-family:'Anton', sans-serif;
+    font-weight:400;
+    text-transform:uppercase;
+    color:var(--chalk);
+    font-size:clamp(56px, 12vw, 148px);
+    line-height:0.88;
+    letter-spacing:0.01em;
+    margin:0;
+  }
+  .wordmark .accent{ color:var(--amber); }
+
+  .hero-logo{
+    width:min(340px, 62vw);
+    height:auto;
+    display:block;
+    margin:0 auto;
+  }
+
+  .subhead{
+    max-width:560px;
+    margin:26px auto 0;
+    font-size:clamp(16px, 2vw, 19px);
+    line-height:1.55;
+    color:var(--chalk-dim);
+    font-weight:400;
+  }
+
+  .pill{
+    margin-top:40px;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:11px 22px;
+    border:1px solid rgba(244,241,232,0.25);
+    border-radius:999px;
+    font-family:'Oswald', sans-serif;
+    font-size:13px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--chalk);
+    background:rgba(244,241,232,0.04);
+  }
+  .pill .ball{
+    width:8px;height:8px;border-radius:50%;
+    background:var(--amber);
+  }
+
+  .scroll-cue{
+    position:absolute;
+    bottom:28px; left:50%;
+    transform:translateX(-50%);
+    font-family:'Oswald', sans-serif;
+    font-size:11px;
+    letter-spacing:0.2em;
+    text-transform:uppercase;
+    color:rgba(244,241,232,0.4);
+  }
+
+  .sound-toggle{
+    margin-top:18px;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:9px 18px;
+    border:1px solid rgba(232,163,61,0.4);
+    border-radius:999px;
+    background:transparent;
+    color:var(--amber);
+    font-family:'Oswald', sans-serif;
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    cursor:pointer;
+    transition:background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  }
+  .sound-toggle:hover{
+    background:rgba(232,163,61,0.12);
+    border-color:var(--amber);
+  }
+  .sound-toggle:focus-visible{
+    outline:2px solid var(--amber);
+    outline-offset:2px;
+  }
+  .sound-icon{ font-size:13px; }
+
+  /* ---------- SECTIONS ---------- */
+  section{
+    max-width:var(--max);
+    margin:0 auto;
+    padding:96px 24px;
+  }
+  .section-head{
+    font-family:'Oswald', sans-serif;
+    font-weight:600;
+    letter-spacing:0.2em;
+    text-transform:uppercase;
+    font-size:12px;
+    color:var(--ink-soft);
+    margin:0 0 18px;
+    display:flex;
+    align-items:center;
+    gap:14px;
+  }
+  .section-head::after{
+    content:"";
+    flex:1;
+    height:1px;
+    background:rgba(19,36,25,0.14);
+  }
+
+  .premise{
+    display:grid;
+    grid-template-columns:1.1fr 1fr;
+    gap:64px;
+    align-items:start;
+  }
+  .premise h2{
+    font-family:'Anton', sans-serif;
+    font-weight:400;
+    text-transform:uppercase;
+    font-size:clamp(30px, 4vw, 44px);
+    line-height:1.05;
+    margin:0;
+    color:var(--pitch-dark);
+  }
+  .premise p{
+    font-size:17px;
+    line-height:1.7;
+    color:var(--ink-soft);
+    margin:0 0 16px;
+  }
+  .premise p:last-child{margin-bottom:0;}
+
+  /* topics */
+  .topics{
+    background:var(--pitch-dark);
+    color:var(--chalk);
+    position:relative;
+  }
+  .topics .section-head{ color:rgba(244,241,232,0.55); }
+  .topics .section-head::after{ background:rgba(244,241,232,0.14); }
+  .topics h2{
+    font-family:'Anton', sans-serif;
+    font-weight:400;
+    text-transform:uppercase;
+    font-size:clamp(28px, 4vw, 40px);
+    margin:0 0 36px;
+  }
+  .chip-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+  }
+  .chip{
+    font-family:'Oswald', sans-serif;
+    font-size:14px;
+    font-weight:500;
+    letter-spacing:0.02em;
+    padding:12px 20px;
+    border-radius:999px;
+    border:1px solid rgba(244,241,232,0.2);
+    color:var(--chalk-dim);
+    transition:border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  }
+  .chip:hover{
+    border-color:var(--amber);
+    color:var(--chalk);
+    transform:translateY(-2px);
+  }
+
+  /* hosts */
+  .hosts{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:32px;
+  }
+  .host-card{
+    border:1px solid rgba(19,36,25,0.12);
+    border-radius:4px;
+    padding:32px;
+    position:relative;
+  }
+  .host-card::before{
+    content:"";
+    position:absolute;
+    top:0; left:32px;
+    width:36px; height:3px;
+    background:var(--amber);
+  }
+  .host-name{
+    font-family:'Oswald', sans-serif;
+    font-weight:600;
+    font-size:20px;
+    margin:14px 0 6px;
+    color:var(--pitch-dark);
+  }
+  .host-role{
+    font-size:13px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--redclock);
+    font-weight:600;
+    margin:0 0 14px;
+  }
+  .host-bio{
+    font-size:15px;
+    line-height:1.65;
+    color:var(--ink-soft);
+    margin:0;
+  }
+  .hosts-closer{
+    max-width:680px;
+    margin:36px auto 0;
+    text-align:center;
+    font-size:17px;
+    line-height:1.6;
+    color:var(--ink-soft);
+    font-style:italic;
+  }
+
+  /* notify */
+  .notify{
+    background:linear-gradient(180deg, #FBF9F2 0%, var(--chalk) 100%);
+    border-top:1px solid rgba(19,36,25,0.08);
+    border-bottom:1px solid rgba(19,36,25,0.08);
+    text-align:center;
+  }
+  .notify h2{
+    font-family:'Anton', sans-serif;
+    font-weight:400;
+    text-transform:uppercase;
+    font-size:clamp(30px, 5vw, 52px);
+    margin:0 0 14px;
+    color:var(--pitch-dark);
+  }
+  .notify p{
+    max-width:480px;
+    margin:0 auto 32px;
+    color:var(--ink-soft);
+    font-size:16px;
+    line-height:1.6;
+  }
+  .notify-form{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    flex-wrap:wrap;
+    max-width:480px;
+    margin:0 auto;
+  }
+  .notify-form input[type="email"]{
+    flex:1;
+    min-width:220px;
+    padding:14px 18px;
+    border:1px solid rgba(19,36,25,0.25);
+    border-radius:4px;
+    font-family:'Public Sans', sans-serif;
+    font-size:15px;
+    background:#fff;
+    color:var(--ink);
+  }
+  .notify-form input[type="email"]:focus{
+    outline:2px solid var(--amber);
+    outline-offset:1px;
+  }
+  .notify-form button{
+    font-family:'Oswald', sans-serif;
+    font-weight:600;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    font-size:13px;
+    padding:14px 26px;
+    border:none;
+    border-radius:4px;
+    background:var(--pitch-dark);
+    color:var(--chalk);
+    cursor:pointer;
+    transition:background 0.2s ease;
+  }
+  .notify-form button:hover{ background:#0E1D14; }
+  .notify-form button:focus-visible,
+  .notify-form input:focus-visible{ outline:2px solid var(--amber); outline-offset:2px; }
+  .form-note{
+    margin-top:16px;
+    font-size:13px;
+    color:var(--ink-soft);
+  }
+  .form-note a{ color:var(--pitch-dark); }
+
+  footer{
+    max-width:var(--max);
+    margin:0 auto;
+    padding:40px 24px 56px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:16px;
+  }
+  .foot-mark{
+    font-family:'Oswald', sans-serif;
+    font-weight:700;
+    letter-spacing:0.04em;
+    font-size:14px;
+    color:var(--pitch-dark);
+  }
+  .foot-links{
+    display:flex;
+    gap:24px;
+    font-family:'Oswald', sans-serif;
+    font-size:13px;
+    letter-spacing:0.04em;
+  }
+  .foot-links a{
+    color:var(--ink-soft);
+    text-decoration:none;
+    border-bottom:1px solid transparent;
+    transition:border-color 0.2s ease, color 0.2s ease;
+  }
+  .foot-links a:hover{
+    color:var(--pitch-dark);
+    border-color:var(--redclock);
+  }
+
+  @media (max-width: 860px){
+    .premise{ grid-template-columns:1fr; gap:28px; }
+    .hosts{ grid-template-columns:1fr; }
+    section{ padding:72px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">A Podcast For DFW Club Soccer Parents</p>
+    <div class="clock" aria-hidden="true">
+      <span class="dot"></span>
+      <span id="clockDisplay">90:00</span>
+      <span class="plus">+ STOPPAGE</span>
+    </div>
+    <img src="logo-square-transparent.png" alt="Stoppage Time DFW" class="hero-logo">
+    <p class="subhead">Regulation ends when the ref blows the whistle. The real conversation — recruiting, club politics, playing time, burnout — happens in the minutes after. That's where we live.</p>
+    <span class="pill"><span class="ball"></span>Coming Soon</span>
+    <button id="soundToggle" class="sound-toggle" type="button" aria-label="Toggle site music" aria-pressed="false">
+      <span class="sound-icon">♫</span> <span id="soundLabel">Sound On</span>
+    </button>
+    <audio id="siteAudio" src="night-of-crowns.mp3" loop preload="none"></audio>
+  </div>
+  <div class="scroll-cue">Scroll</div>
+</div>
+
+<section class="premise" aria-label="About the show">
+  <div>
+    <p class="section-head">The Premise</p>
+    <h2>90 minutes<br>isn't enough.</h2>
+  </div>
+  <div>
+    <p>Stoppage Time is a podcast for parents navigating the sprawling, confusing, expensive world of DFW youth club soccer — from first rec league touches to college recruiting.</p>
+    <p>Every episode, we get into what actually happens on the sidelines, in the group chats, and around the kitchen table: the decisions no club handbook prepares you for.</p>
+  </div>
+</section>
+
+<section class="topics" aria-label="Topics we cover">
+  <p class="section-head">On The Show</p>
+  <h2>What we get into</h2>
+  <div class="chip-row">
+    <span class="chip">Recreational to Club</span>
+    <span class="chip">Selecting the Right League</span>
+    <span class="chip">ECNL vs. MLS Next</span>
+    <span class="chip">Club Tryouts</span>
+    <span class="chip">Picking the Right Team and Coach</span>
+    <span class="chip">High School Soccer</span>
+    <span class="chip">Playing Time & Politics</span>
+    <span class="chip">Costs & Travel</span>
+    <span class="chip">Burnout & Multi-Sport Kids</span>
+    <span class="chip">DFW Club Landscape</span>
+  </div>
+</section>
+
+<section aria-label="Hosts">
+  <p class="section-head">Who's Talking</p>
+  <div class="hosts">
+    <div class="host-card">
+      <p class="host-role">Co-Host</p>
+      <p class="host-name">Colby Smith</p>
+      <p class="host-bio">Colby grew up in Fort Worth and played baseball and basketball at Keller High School, never once picturing himself as a soccer dad. A Texas Tech grad with a degree in Radio/TV, Colby has three sons — the oldest currently at the University of Oklahoma, and two younger sons (16 and 14) who've played club soccer in DFW since they were about seven. What started as a sport he didn't grow up with has become a decade-plus deep dive into the club system, recruiting landscape, and everything in between.</p>
+    </div>
+    <div class="host-card">
+      <p class="host-role">Co-Host</p>
+      <p class="host-name">Cable Smith</p>
+      <p class="host-bio">Cable Smith is a Dallas native and host of the popular Lone Star Outdoors Show. He grew up playing club soccer and suited up for Bishop Lynch High School before earning his Radio, TV and Film degree from the University of North Texas. Cable and his wife are raising three kids — two girls and a boy — all of whom play club soccer today, giving him a front-row seat to the DFW youth landscape from multiple angles at once.</p>
+    </div>
+  </div>
+  <p class="hosts-closer">Together, Cable and Colby bring the perspective of guys who've lived every stage of this — from first tryouts to college signing day — and turned it into the conversation DFW soccer parents didn't know they needed.</p>
+</section>
+
+<section class="notify" aria-label="Get notified">
+  <h2>Be first to know</h2>
+  <p>We're lacing up. Drop your email and we'll let you know the moment episode one drops.</p>
+  <form class="notify-form" id="notifyForm" name="episode-notify" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="episode-notify">
+    <p style="position:absolute;left:-9999px;"><label>Don't fill this out: <input name="bot-field"></label></p>
+    <label for="emailInput" class="visually-hidden" style="position:absolute;left:-9999px;">Email address</label>
+    <input type="email" id="emailInput" name="email" placeholder="you@email.com" required>
+    <button type="submit">Notify Me</button>
+  </form>
+  <p class="form-note" id="formNote">Or reach us directly at <a href="mailto:hello@stoppagetimepod.com">hello@stoppagetimepod.com</a></p>
+</section>
+
+<footer>
+  <span class="foot-mark">STOPPAGE TIME</span>
+  <div class="foot-links">
+    <a href="mailto:hello@stoppagetimepod.com">Email</a>
+    <a href="https://www.instagram.com/stoppagetimedfw/" target="_blank" rel="noopener">Instagram</a>
+    <a href="#" id="ttLink">TikTok</a>
+  </div>
+</footer>
+
+<script>
+  // Ticking stoppage-time clock — starts at 90:00 and never stops climbing.
+  (function(){
+    var display = document.getElementById('clockDisplay');
+    var totalSeconds = 90 * 60;
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(reduceMotion) return;
+    setInterval(function(){
+      totalSeconds += 1;
+      var m = Math.floor(totalSeconds / 60);
+      var s = totalSeconds % 60;
+      display.textContent = m + ':' + String(s).padStart(2,'0');
+    }, 1000);
+  })();
+
+  // Submits to Netlify Forms so entries are actually captured and can trigger
+  // an email notification (set up in Netlify: Site configuration > Forms > Notifications).
+  document.getElementById('notifyForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    var form = this;
+    var note = document.getElementById('formNote');
+    var email = document.getElementById('emailInput').value;
+    var button = form.querySelector('button[type="submit"]');
+    var originalLabel = button.textContent;
+    button.disabled = true;
+    button.textContent = 'Sending...';
+
+    var data = new URLSearchParams(new FormData(form)).toString();
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: data
+    }).then(function(){
+      note.textContent = "Thanks — we'll email " + email + " when we kick off.";
+      form.reset();
+    }).catch(function(){
+      note.textContent = "Something went wrong — mind emailing us directly at hello@stoppagetimepod.com instead?";
+    }).finally(function(){
+      button.disabled = false;
+      button.textContent = originalLabel;
+    });
+  });
+
+  // ---------- Background music: starts on first visitor interaction ----------
+  (function(){
+    var audio = document.getElementById('siteAudio');
+    var toggleBtn = document.getElementById('soundToggle');
+    var label = document.getElementById('soundLabel');
+    audio.volume = 0.35;
+    var userMuted = false;
+
+    function setPlayingUI(isPlaying){
+      toggleBtn.setAttribute('aria-pressed', isPlaying ? 'true' : 'false');
+      label.textContent = isPlaying ? 'Sound On' : 'Sound Off';
+    }
+
+    function tryStart(){
+      if(userMuted) return;
+      audio.play().then(function(){
+        setPlayingUI(true);
+      }).catch(function(){
+        // Autoplay blocked — will retry on next user interaction automatically
+        setPlayingUI(false);
+      });
+    }
+
+    // Browsers block audio-with-sound until a user gesture occurs on the page.
+    function firstInteractionStart(e){
+      if(toggleBtn.contains(e.target)) return; // toggle handles its own click
+      tryStart();
+    }
+    document.addEventListener('pointerdown', firstInteractionStart, { once: true });
+    document.addEventListener('keydown', firstInteractionStart, { once: true });
+
+    toggleBtn.addEventListener('click', function(){
+      if(audio.paused){
+        userMuted = false;
+        tryStart();
+      } else {
+        audio.pause();
+        userMuted = true;
+        setPlayingUI(false);
+      }
+    });
+  })();
+</script>
+
+</body>
+</html>
