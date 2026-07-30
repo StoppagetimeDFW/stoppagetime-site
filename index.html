@@ -282,6 +282,17 @@
     .listen-card{ flex-direction:column; align-items:flex-start; padding:28px; }
   }
 
+  .spotify-embed-wrap{
+    max-width:1120px;
+    margin:20px auto 0;
+    border-radius:6px;
+    overflow:hidden;
+  }
+  .spotify-embed-wrap iframe{
+    display:block;
+    border-radius:6px;
+  }
+
   /* ---------- SECTIONS ---------- */
   section{
     max-width:var(--max);
@@ -541,7 +552,7 @@
     <img src="logo-square-transparent.png" alt="Stoppage Time DFW" class="hero-logo">
     <p class="subhead">Regulation ends when the ref blows the whistle. The real conversation — recruiting, club politics, playing time, burnout — happens in the minutes after. That's where we live.</p>
     <span class="pill"><span class="ball"></span>Episode 1 Is Live</span>
-    <a href="https://open.spotify.com/episode/116FN0XH0DmfNhsrgI8gFb?si=f6VMNQAnT_iAHplGune1lw" target="_blank" rel="noopener" class="listen-btn">
+    <a href="#listen" class="listen-btn">
       <span class="listen-icon">▶</span> Listen Now
     </a>
     <button id="soundToggle" class="sound-toggle" type="button" aria-label="Toggle site music" aria-pressed="false">
@@ -563,7 +574,7 @@
   </div>
 </section>
 
-<section class="listen-section" aria-label="Latest episode">
+<section class="listen-section" aria-label="Latest episode" id="listen">
   <p class="section-head">Episode 1</p>
   <div class="listen-card">
     <div>
@@ -571,8 +582,20 @@
       <p>Two DFW soccer dads, five soccer playing kids between them, and zero professional soccer credentials. Colby and Cable introduce themselves, explain why they started this show, and walk through their own kids' soccer journeys — the good calls, the "what were we thinking" moments, and everything in between.</p>
     </div>
     <a href="https://open.spotify.com/episode/116FN0XH0DmfNhsrgI8gFb?si=f6VMNQAnT_iAHplGune1lw" target="_blank" rel="noopener" class="listen-btn listen-btn-dark">
-      <span class="listen-icon">▶</span> Listen on Spotify
+      <span class="listen-icon">▶</span> Open in Spotify
     </a>
+  </div>
+  <div class="spotify-embed-wrap">
+    <iframe
+      src="https://open.spotify.com/embed/episode/116FN0XH0DmfNhsrgI8gFb?utm_source=generator"
+      width="100%"
+      height="152"
+      frameborder="0"
+      allowfullscreen=""
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy"
+      title="Stoppage Time — Episode 1 player">
+    </iframe>
   </div>
 </section>
 
