@@ -211,6 +211,77 @@
   }
   .sound-icon{ font-size:13px; }
 
+  .listen-btn{
+    margin-top:22px;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:14px 30px;
+    border-radius:999px;
+    background:var(--amber);
+    color:var(--pitch-dark);
+    font-family:'Oswald', sans-serif;
+    font-size:15px;
+    font-weight:700;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    text-decoration:none;
+    transition:transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+    box-shadow:0 6px 20px rgba(232,163,61,0.25);
+  }
+  .listen-btn:hover{
+    background:#F0B355;
+    transform:translateY(-2px);
+    box-shadow:0 8px 26px rgba(232,163,61,0.35);
+  }
+  .listen-btn:focus-visible{
+    outline:2px solid var(--chalk);
+    outline-offset:3px;
+  }
+  .listen-icon{ font-size:12px; }
+
+  .listen-btn-dark{
+    flex:none;
+    white-space:nowrap;
+  }
+
+  .listen-section{
+    background:linear-gradient(135deg, #1F3D2E 0%, #16281F 100%);
+    color:var(--chalk);
+  }
+  .listen-section .section-head{ color:rgba(244,241,232,0.55); }
+  .listen-section .section-head::after{ background:rgba(244,241,232,0.14); }
+  .listen-card{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:32px;
+    flex-wrap:wrap;
+    padding:36px;
+    border:1px solid rgba(244,241,232,0.14);
+    border-radius:6px;
+    background:rgba(244,241,232,0.03);
+  }
+  .listen-card h2{
+    font-family:'Anton', sans-serif;
+    font-weight:400;
+    text-transform:uppercase;
+    font-size:clamp(24px, 3.4vw, 34px);
+    margin:0 0 12px;
+    color:var(--chalk);
+  }
+  .listen-card p{
+    font-size:15px;
+    line-height:1.65;
+    color:var(--chalk-dim);
+    margin:0;
+    max-width:560px;
+  }
+
+  @media (max-width: 640px){
+    .listen-card{ flex-direction:column; align-items:flex-start; padding:28px; }
+  }
+
   /* ---------- SECTIONS ---------- */
   section{
     max-width:var(--max);
@@ -469,7 +540,10 @@
     </div>
     <img src="logo-square-transparent.png" alt="Stoppage Time DFW" class="hero-logo">
     <p class="subhead">Regulation ends when the ref blows the whistle. The real conversation — recruiting, club politics, playing time, burnout — happens in the minutes after. That's where we live.</p>
-    <span class="pill"><span class="ball"></span>Coming Soon</span>
+    <span class="pill"><span class="ball"></span>Episode 1 Is Live</span>
+    <a href="https://open.spotify.com/episode/116FN0XH0DmfNhsrgI8gFb?si=f6VMNQAnT_iAHplGune1lw" target="_blank" rel="noopener" class="listen-btn">
+      <span class="listen-icon">▶</span> Listen Now
+    </a>
     <button id="soundToggle" class="sound-toggle" type="button" aria-label="Toggle site music" aria-pressed="false">
       <span class="sound-icon">♫</span> <span id="soundLabel">Sound On</span>
     </button>
@@ -486,6 +560,19 @@
   <div>
     <p>Stoppage Time is a podcast for parents navigating the sprawling, confusing, expensive world of DFW youth club soccer — from first rec league touches to college recruiting.</p>
     <p>Every episode, we get into what actually happens on the sidelines, in the group chats, and around the kitchen table: the decisions no club handbook prepares you for.</p>
+  </div>
+</section>
+
+<section class="listen-section" aria-label="Latest episode">
+  <p class="section-head">Episode 1</p>
+  <div class="listen-card">
+    <div>
+      <h2>Kickoff: Why We're Doing This</h2>
+      <p>Two DFW soccer dads, five soccer playing kids between them, and zero professional soccer credentials. Colby and Cable introduce themselves, explain why they started this show, and walk through their own kids' soccer journeys — the good calls, the "what were we thinking" moments, and everything in between.</p>
+    </div>
+    <a href="https://open.spotify.com/episode/116FN0XH0DmfNhsrgI8gFb?si=f6VMNQAnT_iAHplGune1lw" target="_blank" rel="noopener" class="listen-btn listen-btn-dark">
+      <span class="listen-icon">▶</span> Listen on Spotify
+    </a>
   </div>
 </section>
 
