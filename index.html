@@ -767,5 +767,122 @@
   })();
 </script>
 
+<!-- SOCCER CITY FRISCO — sponsor badge, upper-left corner -->
+<a
+  href="https://soccercityfrisco.com/"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="sc-badge"
+  aria-label="Soccer City Frisco — 15% off with code STOPPAGE15"
+  title="Soccer City Frisco — 15% off with code STOPPAGE15"
+>
+  <img
+    src="images/soccer-city-frisco-logo.png"
+    alt="Soccer City Frisco"
+    class="sc-badge__img"
+    width="52" height="52"
+    loading="lazy"
+  />
+  <span class="sc-badge__text">
+    <span class="sc-badge__pct">15% OFF</span>
+    <span class="sc-badge__code">STOPPAGE15</span>
+  </span>
+</a>
+
+<style>
+  .sc-badge {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #fff8ef;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(30, 27, 75, 0.28);
+    border: 1.5px dashed #f5940a;
+    padding: 8px 14px 8px 8px;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+
+  .sc-badge:hover,
+  .sc-badge:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(30, 27, 75, 0.35);
+  }
+
+  .sc-badge:focus-visible {
+    outline: 2px solid #f5940a;
+    outline-offset: 2px;
+  }
+
+  .sc-badge__img {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+    flex-shrink: 0;
+    border-radius: 8px;
+  }
+
+  .sc-badge__text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+  }
+
+  .sc-badge__pct {
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    color: #1e1b4b;
+    text-transform: uppercase;
+  }
+
+  .sc-badge__code {
+    font-family: "SFMono-Regular", Consolas, Menlo, monospace;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #201c3a;
+    letter-spacing: 0.02em;
+  }
+
+  @media (max-width: 480px) {
+    .sc-badge {
+      top: 10px;
+      left: 10px;
+      padding: 6px 10px 6px 6px;
+      gap: 8px;
+    }
+    .sc-badge__img {
+      width: 40px;
+      height: 40px;
+    }
+    .sc-badge__pct {
+      font-size: 0.6rem;
+    }
+    .sc-badge__code {
+      font-size: 0.82rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .sc-badge { transition: none; }
+  }
+
+  @media print {
+    .sc-badge {
+      position: static;
+      display: inline-flex;
+      box-shadow: none;
+      border: 1.5px solid #1e1b4b;
+      margin: 12px 0;
+    }
+  }
+</style>
+
 </body>
 </html>
