@@ -786,6 +786,28 @@
   <span class="sc-badge__text">
     <span class="sc-badge__pct">15% OFF</span>
     <span class="sc-badge__code">STOPPAGE15</span>
+  </span></a>
+
+<!-- THE GOALKEEPER U — sponsor badge, stacked below Soccer City badge -->
+<a
+  href="https://www.thegoalkeeperu.com/classes"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="gk-badge"
+  aria-label="The Goalkeeper U — 15% off small group season with code STOPPAGETIME"
+  title="The Goalkeeper U — 15% off small group season with code STOPPAGETIME"
+>
+  <img
+    src="goalkeeperu-logo.png"
+    alt="The Goalkeeper U"
+    class="gk-badge__img"
+    width="48" height="48"
+    loading="lazy"
+  />
+  <span class="gk-badge__text">
+    <span class="gk-badge__name">The Goalkeeper U</span>
+    <span class="gk-badge__pct">15% OFF small group season</span>
+    <span class="gk-badge__code">STOPPAGETIME</span>
   </span>
 </a>
 
@@ -879,6 +901,96 @@
       display: inline-flex;
       box-shadow: none;
       border: 1.5px solid #1e1b4b;
+      margin: 12px 0;
+    }
+  }
+
+  /* THE GOALKEEPER U badge — site brand colors, stacked under Soccer City badge */
+  .gk-badge {
+    position: fixed;
+    top: 94px;
+    left: 16px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #16281F;
+    border: 1.5px dashed #E8A33D;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+    padding: 8px 16px 8px 8px;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    font-family: 'Oswald', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    max-width: 240px;
+  }
+  .gk-badge__img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+  .gk-badge:hover,
+  .gk-badge:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.45);
+  }
+  .gk-badge:focus-visible {
+    outline: 2px solid #E8A33D;
+    outline-offset: 2px;
+  }
+  .gk-badge__text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.25;
+  }
+  .gk-badge__name {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: #F4F1E8;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+  .gk-badge__pct {
+    font-size: 0.68rem;
+    font-weight: 500;
+    color: #E7E2D3;
+  }
+  .gk-badge__code {
+    font-family: "SFMono-Regular", Consolas, Menlo, monospace;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #E8A33D;
+    letter-spacing: 0.02em;
+    margin-top: 3px;
+  }
+
+  @media (max-width: 480px) {
+    .gk-badge {
+      top: 62px;
+      left: 10px;
+      padding: 6px 12px 6px 6px;
+      gap: 8px;
+      max-width: 190px;
+    }
+    .gk-badge__img { width: 36px; height: 36px; }
+    .gk-badge__name { font-size: 0.62rem; }
+    .gk-badge__pct { font-size: 0.58rem; }
+    .gk-badge__code { font-size: 0.75rem; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .gk-badge { transition: none; }
+  }
+
+  @media print {
+    .gk-badge {
+      position: static;
+      display: inline-flex;
+      box-shadow: none;
+      border: 1.5px solid #16281F;
       margin: 12px 0;
     }
   }
